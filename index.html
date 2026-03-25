@@ -156,43 +156,64 @@
 
     <div class="section2 cinza" id="Inovação">
         <div class="container valores">
-            <h3 class="desconto"><b>Mensalidade com Desconto Aplicado</b></h3>
-            <div class="row">
-                <div class="col-2">
-                    <div class="">
-                        <img src="colengenharia.jpg" class="cartão" id="engenharia">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="">
-                        <img src="coltecnológicos.jpg" class="cartão" id="tecnologia">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="">
-                        <img src="colsaúde.jpg" class="cartão" id="saude">
-                    </div>
-                </div>
-                <div class="col-2">
-                    <div class="">
-                        <img src="colarquitetura.jpg" class="cartão" id="arquitetura">
-                    </div>
-                </div>
-                <div class="col justify-content-center">
-                    <label class="ENEM" style="color: #C6A75E; margin-top: 25px; font-family: 'Montserrat';"
-                        for="NOTA_ENEM" id="">
-                        Nota do ENEM
-                    </label>
+            <h3 class="desconto text-center"><b>Mensalidade com Desconto Aplicado</b></h3>
 
-                    <input type="number" value="0" class="form-control form-control-sm ENEM mb-2" id="NOTA_ENEM">
+            <div class="row align-items-center">
 
-                    <button class="btn btn-warning btn-sm" style="font-family: 'Montserrat';" id="calcular">
-                        Calcular Desconto
-                    </button>
+                <!-- COLUNA DAS IMAGENS -->
+                <div class="col-12 col-md-12 col-lg-8">
+                    <div class="row g-3 justify-content-center">
 
-                    <label class="ENEM" style="color: #C6A75E; margin-top: 25px; font-family: 'Montserrat';"
-                        for="prisoma_número"><b>VALOR COM DESCONTO</b></label>
-                    <input type="number" value="0" class="form-control form-control-sm ENEM mb-2" id="Mensalidade">
+                        <div class="col-3">
+                            <img src="colengenharia.jpg" class="cartão img-fluid w-100" id="engenharia">
+                        </div>
+
+                        <div class="col-3">
+                            <img src="coltecnológicos.jpg" class="cartão img-fluid w-100" id="tecnologia">
+                        </div>
+
+                        <div class="col-3">
+                            <img src="colsaúde.jpg" class="cartão img-fluid w-100" id="saude">
+                        </div>
+
+                        <div class="col-3">
+                            <img src="colarquitetura.jpg" class="cartão img-fluid w-100" id="arquitetura">
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- COLUNA DO FORMULÁRIO -->
+                <div class="col-12 col-md-12 col-lg-4">
+
+                    <div class="row align-items-end g-2">
+
+                        <!-- NOTA ENEM -->
+                        <div class="col-12 col-md-4 col-lg-12">
+                            <label class="ENEM" style="color: #C6A75E; font-family: 'Montserrat'; margin-top: 25px;">
+                                <b>Nota do ENEM</b>
+                            </label>
+                            <input type="number" value="0" class="form-control form-control-sm" id="NOTA_ENEM">
+                        </div>
+
+                        <!-- BOTÃO -->
+                        <div class="col-12 col-md-4 col-lg-12 d-flex justify-content-start">
+                            <button class="btn btn-warning btn-sm" style="font-family: 'Montserrat';"
+                                id="calcular">
+                                Calcular Desconto
+                            </button>
+                        </div>
+
+                        <!-- VALOR -->
+                        <div class="col-12 col-md-4 col-lg-12">
+                            <label class="ENEM" style="color: #C6A75E; font-family: 'Montserrat';">
+                                <b>Valor com desconto</b>
+                            </label>
+                            <input type="number" value="0" class="form-control form-control-sm" id="Mensalidade">
+                        </div>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -204,9 +225,9 @@
         <div class="">
             <a href="https://maps.app.goo.gl/WXPgRDtZyqr2T2Se9" target="_blank">
                 <img src="tourcampus.png" height="540px" style="margin-left: 270px; margin-top: 80px;">
-                </a>
-            </div>
-            <div class="col"></div>
+            </a>
+        </div>
+        <div class="col"></div>
 
     </div>
 
@@ -274,7 +295,7 @@
                                 <a href="#!" class="text-reset">Nossa História</a>
                             </p>
                         </div>
-                        
+
                         <div class="col-sm-10 col-md-3 col-lg-3 mx-auto mb-4">
                             <h6 class="text-uppercase fw-bold mb-4">
                                 Inovação
@@ -292,7 +313,7 @@
                                 <a href="#!" class="text-reset">Industria 4.0</a>
                             </p>
                         </div>
-        
+
                         <div class="col-sm-10 col-md-3 col-lg-3 mx-auto mb-4">
                             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
                             <p>Tatuí, SP 10012, BR</p>

@@ -205,7 +205,12 @@
 
 .ENEM {
     margin-left: 20px;
-    width: 300px;
+    width: 200px !important;
+}
+
+#NOTA_ENEM, #Mensalidade{
+    margin-left: 20px;
+    width: 350px !important;
 }
 
 .btn-warning{

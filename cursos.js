@@ -2,19 +2,8 @@ $(document).ready(function () {
 
     get_valores();
 
-
-
     $(".btnoi").hide();
     $(".overlay").css("opacity", "0");
-
-    // Valores
-
-    $('.filtro_valores').keyup(function () {
-        console.log(filtro_valores);
-
-        filtro_valores();
-    });
-
 
     // HOVER INFORMAÇÕES
     $(".card-curso").hover(
@@ -28,7 +17,7 @@ $(document).ready(function () {
         }
     );
 
-    // ORGANIZAÇÃO POR ORDEM ALFABÉTICA
+    // ORGANIZAÇÃO ALFABÉTICA
     let cards = $(".card-curso").get();
     cards.sort(function (a, b) {
         let nomeA = $(a).find("img").attr("src").toUpperCase();
@@ -39,88 +28,58 @@ $(document).ready(function () {
         $(".pagina").append(card);
     });
 
-
-
-    // FILTRO
-    function aplicarFiltros() {
-        let texto = $("#titulo").val().toLowerCase().trim();
-        let categoriaSelecionada = $("#categoria").val();
-
-        $(".card-curso").each(function () {
-
-            let nome = $(this).data("nome").toLowerCase();
-            let categoria = $(this).data("categoria").toString();
-
-            let filtroNome = nome.includes(texto);
-            let filtroCategoria = (categoriaSelecionada == "0" || categoria == categoriaSelecionada);
-
-            if (filtroNome && filtroCategoria) {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
-
-        });
-    }
-
+    // EVENTOS DOS FILTROS (todos chamam a mesma função)
     $("#titulo").on("keyup", aplicarFiltros);
     $("#categoria").on("change", aplicarFiltros);
+    $(".filtro_valores").on("keyup", aplicarFiltros);
 
 });
 
 
+// 🔥 FUNÇÃO UNIFICADA DE FILTRO
+function aplicarFiltros() {
 
-function filtro_valores() {
-    let maximo = parseFloat($("#maximo").val().replace('.', '').replace(',', '.')); 
+    let texto = $("#titulo").val().toLowerCase().trim();
+    let categoriaSelecionada = $("#categoria").val();
 
+    let maximo = parseFloat($("#maximo").val().replace('.', '').replace(',', '.')) || Infinity;
+    let minimo = parseFloat($("#minimo").val().replace('.', '').replace(',', '.')) || 0;
 
-    let minimo = parseFloat($("#minimo").val().replace('.', '').replace(',', '.'));
+    $(".card-curso").each(function () {
 
-    console.log(maximo);
+        let nome = $(this).data("nome").toLowerCase();
+        let categoria = $(this).data("categoria").toString();
 
-    console.log(minimo);
-
-    $(this).parent().parent().hide();
-
-
-    $(".valor").each(function (index) {
-
-        let valor = $(this).html().replace('R$', '');
-
-        valor = valor.replace('.','');
-
+        let valor = $(this).find(".valor").html().replace('R$', '');
+        valor = valor.replace('.', '');
         valor = parseFloat(valor.replace(',', '.'));
 
+        // filtros individuais
+        let filtroNome = nome.includes(texto);
+        let filtroCategoria = (categoriaSelecionada == "0" || categoria == categoriaSelecionada);
+        let filtroValor = (valor >= minimo && valor <= maximo);
 
-        if (valor > maximo || valor < minimo) {
-
-            $(this).parent().parent().parent().hide();
-
+        // 🔥 TODOS juntos
+        if (filtroNome && filtroCategoria && filtroValor) {
+            $(this).show();
         } else {
-            $(this).parent().parent().parent().show();
-
+            $(this).hide();
         }
 
-
-
     });
-
 }
 
 
-
+// 🔧 MANTIDO (sem alteração de lógica)
 function get_valores() {
 
     let menor = 0.00;
-
     let maior = 0.00;
 
     $(".valor").each(function (index) {
 
         let valor = $(this).html().replace('R$', '');
-
-        valor = valor.replace('.','');
-
+        valor = valor.replace('.', '');
         valor = parseFloat(valor.replace(',', '.'));
 
         if (index == 0) {
@@ -142,6 +101,7 @@ function get_valores() {
 }
 
 
+// 🔧 MANTIDO
 function moeda(a, e, r, t) {
     let n = "",
         h = j = 0,
