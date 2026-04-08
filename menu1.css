@@ -27,9 +27,9 @@
 }
 
 .section1 {
-    width: 100%;
+    width: 100vw;
     margin: 40px auto 0;
-    min-height: 545px;
+    min-height: 110vh;
     display: flex;
     align-items: center;      
     justify-content: center; 
@@ -37,8 +37,8 @@
 
 
 .section2 {
-    width: 100%;
-    min-height: 730px;
+    width: 100vw;
+    min-height: 90vh;
     display: flex;
     align-items: center;      
     justify-content: center; 
@@ -72,7 +72,7 @@
 }
 
 .carousel-img {
-    height: 500px;
+    height: 80vh;
     width: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
@@ -219,4 +219,29 @@
 
 #informações{
     font-family: Montserrat;
+}
+
+
+
+
+@media (max-width: 768px){
+
+    .container{
+        padding: 20px 0;
+    }
+
+    .section1 , .section2{
+        min-width: 1000vw;
+        min-height: 100vw;
+    }
+
+    #carousel-nexus .carousel-inner, #carousel-nexus .carousel-item  {
+        height: 60vh;
+        object-fit: cover;
+    }
+
+    .carousel-item .carousel-img {
+        height: 100%;
+        width: 100%;
+    }
 }
