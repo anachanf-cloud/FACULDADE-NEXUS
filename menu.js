@@ -122,3 +122,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     elementos.forEach(el => observer.observe(el));
 });
+
+const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+  target: '#navbar-principal',
+  offset: 120
+});
