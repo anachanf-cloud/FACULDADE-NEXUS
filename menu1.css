@@ -274,6 +274,94 @@ html {
 /* TABLET */
 @media (max-width: 992px) {
 
+    #body,
+    html {
+        overflow-x: hidden;
+    }
+
+    .section1 {
+        max-height: vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .section3 {
+        width: 100%;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .navbar-toggler {
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+
+    #barra-navegacao {
+        width: 100%;
+    }
+
+    .icone-nexus {
+        height: 40px;
+    }
+
+    #carousel-nexus {
+        margin-top: -75px;
+    }
+
+    .carousel-img {
+        height: 300px;
+    }
+
+
+    #NEXUS,
+    #Inovação {
+        scroll-margin-top: 110px;
+    }
+
+    .img-students {
+        float: right;
+        width: 300px;
+        height: auto;
+        shape-outside: url('estudantes.png');
+        shape-margin: 5px;
+        margin-top: -80px;
+    }
+
+    .Titulo-nexus {
+        font-size: 22px;
+
+    }
+
+    .p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .texto-nexus {
+        margin: 0 auto;
+    }
+
+    .mobile-nexus {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .nexus-text {
+        display: none;
+
+    }
+
+
     #Inovação .valores {
         height: auto;
         padding: 30px 20px;
