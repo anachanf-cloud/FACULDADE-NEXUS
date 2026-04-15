@@ -22,21 +22,19 @@
 
 <body style="background-color: #F8F9FB;" data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="100"
     tabindex="0">
-    <nav class="navbar navbar-expand-lg fixed-top"
-        style="background-color: #0b1f3b; font-family: Montserrat; color: #fbf6f3; font-size: 15px;"
-        data-bs-theme="dark" id="barra_navegacao">
-        <div class="container" >
+    <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark" id="barra-navegacao">
+        <div class="container p-0">
             <a class="navbar-brand" href="index.html">
-                <img src="NEXUS.png" height="50px">
-            </a>   
+                <img src="NEXUS.png" class="icone-nexus">
+            </a>
 
-            <button class="navbar-toggler nav-respon" type="button" data-bs-toggle="collapse"
+            <button class="navbar-toggler nav-respon ms-auto" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
                 aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse " id="navbarToggleExternalContent">
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
 
                     <li class="nav-item dropdown">
@@ -84,12 +82,12 @@
                         Sign up
                     </button></a>
             </div>
-            
+
         </div>
     </nav>
 
     <div class="container-fluid p-0">
-        <div class="row inicial">
+        <div class="row inicial minha-row">
             <div class="col-md-1 col-lg"></div>
 
             <div class="col-md-10 col-lg-11" id="carousel-nexus">
@@ -126,13 +124,14 @@
     </div>
 
 
-    <div class="section1 azul-navy" id="NEXUS">
-        <div class="row align-items-center nexus-text">
+    <div class="section1 azul-navy nexus-text" id="NEXUS">
+        <div class="row align-items-center ">
             <div class="col-1"></div>
-            <div class="col-sm-12 col-md-5 col-lg-5">
-                <div class="container text-justify text-center"
+            <div class="col-md-5 col-lg-5">
+                <div class="container text-justify text-center texto-nexus"
                     style="margin-bottom: 5px; margin-top: 25px; max-width: 550px;">
-                    <h3 style="color: #F8F9FB; font-family: Montserrat;"><i><b>A Faculdade NEXUS de Tecnologia</b></i>
+                    <h3 class="Titulo-nexus" style="color: #F8F9FB; font-family: Montserrat;"><i><b>A Faculdade NEXUS de
+                                Tecnologia</b></i>
                         </h1>
                         <p class="lead p" style="font-family: Montserrat; text-align: justify; color: #F8F9FB;">
                             A Faculdade NEXUS de Tecnologia (FaNET) é uma instituição focada na formação de
@@ -151,72 +150,85 @@
             </div>
 
             <div class="col-5 students" style="margin-top: -170px;">
-                <img src="estudantes.png" height="725px">
+                <img src="estudantes.png" class="img-students">
             </div>
             <div class="col"></div>
 
         </div>
     </div>
 
+    <div class="section1 azul-navy mobile-nexus" id="NEXUS">
+        <div class="align-items-center ">
+                <div class="container text-justify align-items-center texto-nexus"
+                    style="margin-bottom: 5px; margin-top: 25px; max-width: 550px;">
+                
+                    <h3 class="Titulo-nexus text-center" style="color: #F8F9FB; font-family: Montserrat;">
+                        <i><b>A Faculdade NEXUS de Tecnologia</b></i>
+                    </h3>
+                    
+                    <img src="estudantes.png" class="img-students">
+                    
+                    <p class="lead p" style="font-family: Montserrat; text-align: justify; color: #F8F9FB;">
+                            A Faculdade NEXUS de Tecnologia (FaNET) é uma instituição focada na formação de
+                            profissionais
+                            preparados para o futuro. Integrando tecnologia a todos os cursos, independentemente da
+                            área,
+                            oferecemos uma qualificação atual, prática e alinhada às exigências do mercado. Nosso
+                            objetivo é
+                            desenvolver alunos com visão estratégica, domínio tecnológico e capacidade de inovação,
+                            tornando-os
+                            aptos a atuar em um cenário cada vez mais digital e competitivo. Na FaNET, você não apenas
+                            acompanha
+                            as transformações, <b>você se prepara para liderá-las.</b>
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
     <div class="section2 cinza" id="Inovação">
         <div class="container valores">
-            <h3 class="desconto text-center"><b>Mensalidade com Desconto Aplicado</b></h3>
-
-            <div class="row align-items-center">
-
-                <!-- COLUNA DAS IMAGENS -->
-                <div class="col-12 col-md-12 col-lg-8">
-                    <div class="row g-3 justify-content-center">
-
-                        <div class="col-3">
-                            <img src="colengenharia.jpg" class="cartão img-fluid w-100" id="engenharia">
-                        </div>
-
-                        <div class="col-3">
-                            <img src="coltecnológicos.jpg" class="cartão img-fluid w-100" id="tecnologia">
-                        </div>
-
-                        <div class="col-3">
-                            <img src="colsaúde.jpg" class="cartão img-fluid w-100" id="saude">
-                        </div>
-
-                        <div class="col-3">
-                            <img src="colarquitetura.jpg" class="cartão img-fluid w-100" id="arquitetura">
-                        </div>
-
+            <h3 class="desconto"><b>Mensalidade com Desconto Aplicado</b></h3>
+            <div class="row">
+                <div class="col-2">
+                    <div class="">
+                        <img src="colengenharia.jpg" class="cartão" id="engenharia">
                     </div>
                 </div>
-
-                <!-- COLUNA DO FORMULÁRIO -->
-                <div class="col-12 col-md-12 col-lg-4">
-
-                    <div class="row align-items-end g-2">
-
-                        <!-- NOTA ENEM -->
-                        <div class="col-12 col-md-4 col-lg-12">
-                            <label class="ENEM" style="color: #C6A75E; font-family: 'Montserrat'; margin-top: 25px;">
-                                <b>Nota do ENEM</b>
-                            </label>
-                            <input type="number" value="0" class="form-control form-control-sm" id="NOTA_ENEM">
-                        </div>
-
-                        <!-- BOTÃO -->
-                        <div class="col-12 col-md-4 col-lg-12 d-flex justify-content-start">
-                            <button class="btn btn-warning btn-sm" style="font-family: 'Montserrat';" id="calcular">
-                                Calcular Desconto
-                            </button>
-                        </div>
-
-                        <!-- VALOR -->
-                        <div class="col-12 col-md-4 col-lg-12">
-                            <label class="ENEM" style="color: #C6A75E; font-family: 'Montserrat';">
-                                <b>Valor com desconto</b>
-                            </label>
-                            <input type="number" value="0" class="form-control form-control-sm" id="Mensalidade">
-                        </div>
-
+                <div class="col-2">
+                    <div class="">
+                        <img src="coltecnológicos.jpg" class="cartão" id="tecnologia">
                     </div>
+                </div>
+                <div class="col-2">
+                    <div class="">
+                        <img src="colsaúde.jpg" class="cartão" id="saude">
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="">
+                        <img src="colarquitetura.jpg" class="cartão" id="arquitetura">
+                    </div>
+                </div>
+                <div class="col justify-content-center">
+                    <label class="ENEM" style="color: #C6A75E; margin-top: 25px; font-family: 'Montserrat';"
+                        for="NOTA_ENEM" id="">
+                        <b>NOTA DO ENEM</b>
+                    </label>
 
+                    <input type="number" value="0" class="form-control form-control-sm ENEM mb-2" id="NOTA_ENEM">
+
+                    <button class="btn btn-warning btn-sm" style="font-family: 'Montserrat';" id="calcular">
+                        Calcular Desconto
+                    </button>
+
+                    <label class="ENEM" style="color: #C6A75E; margin-top: 25px; font-family: 'Montserrat';"
+                        for="prisoma_número" ><b>VALOR COM DESCONTO</b></label>
+                    <input type="number" value="0" class="form-control form-control-sm ENEM mb-2" id="Mensalidade">
                 </div>
 
             </div>
@@ -224,45 +236,22 @@
     </div>
 
 
-    <div class="section2 dourado" id="campus">
-        <div class="">
+    <div class="section3 dourado" id="campus">
+        <div class="row">
             <a href="https://maps.app.goo.gl/WXPgRDtZyqr2T2Se9" target="_blank">
-                <img src="tourcampus.png" height="540px" style="margin-left: 270px; margin-top: 80px;">
+                <img src="tourcampus.png" class="img-campus">
             </a>
         </div>
-        <div class="col"></div>
-
     </div>
 
 
     <div class="branco" id="informações">
         <footer class="text-center text-lg-start bg-body-tertiary text-muted">
-            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-                <div>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-google"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="" class="me-4 text-reset">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </div>
-            </section>
             <section class="informações">
                 <div class="container text-center text-md-start mt-5">
                     <div class="row mt-3">
-                        <div class="col-sm-10 col-md-3 col-lg-3 mx-auto mb-4">
+
+                        <div class="col-6 col-sm-10 col-md-3 col-lg-3 mx-auto mb-4">
                             <h6 class="text-uppercase fw-bold mb-4">
                                 Formas de Entrada
                             </h6>
@@ -280,8 +269,7 @@
                             </p>
                         </div>
 
-
-                        <div class="col-sm-10 col-md-3 col-lg-3 mx-auto mb-4">
+                        <div class="col-6 col-sm-10 col-md-3 col-lg-3 mx-auto mb-4">
                             <h6 class="text-uppercase fw-bold mb-4">
                                 NEXUS
                             </h6>
@@ -299,7 +287,7 @@
                             </p>
                         </div>
 
-                        <div class="col-sm-10 col-md-3 col-lg-3 mx-auto mb-4">
+                        <div class="col-6 col-sm-10 col-md-3 col-lg-3 mx-auto mb-4">
                             <h6 class="text-uppercase fw-bold mb-4">
                                 Inovação
                             </h6>
@@ -317,16 +305,18 @@
                             </p>
                         </div>
 
-                        <div class="col-sm-10 col-md-3 col-lg-3 mx-auto mb-4">
+                        <div class="col-6 col-sm-10 col-md-3 col-lg-3 mx-auto mb-4">
                             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
                             <p>Tatuí, SP 10012, BR</p>
                             <p>faculdade@nexus.com</p>
                             <p>(15) 99825-0033</p>
                             <p>(15) 99721-5905</p>
                         </div>
+
                     </div>
                 </div>
             </section>
+
             <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
                 © 2026 Direitos Reservados
             </div>

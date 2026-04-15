@@ -1,6 +1,8 @@
-#body,html{
+#body,
+html {
     overflow-x: hidden;
     font-family: Montserrat;
+    padding-top: 56px;
 }
 
 
@@ -27,21 +29,29 @@
 }
 
 .section1 {
-    width: 100vw;
+    width: 100%;
     margin: 40px auto 0;
-    min-height: 110vh;
+    min-height: 545px;
     display: flex;
-    align-items: center;      
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
 }
 
 
 .section2 {
-    width: 100vw;
-    min-height: 90vh;
+    width: 100%;
+    min-height: 730px;
     display: flex;
-    align-items: center;      
-    justify-content: center; 
+    align-items: center;
+    justify-content: center;
+}
+
+.section3 {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .azul-navy {
@@ -65,14 +75,15 @@
 }
 
 .carousel-espaço {
-    margin: 110px auto 0;;
+    margin: 110px auto 0;
+    ;
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-img {
-    height: 80vh;
+    height: 500px;
     width: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
@@ -80,17 +91,29 @@
 
 
 .carousel-item {
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 .carousel-item:hover .carousel-img {
-    transform: scale(1.08); rotate: (0.5deg);
+    transform: scale(1.08);
+    rotate: (0.5deg);
 }
 
 .navbar .nav-link.active {
     color: #ffffff !important;
     font-weight: 600;
     border-bottom: 2px solid #ffffff;
+}
+
+#barra-navegacao {
+    background-color: #0b1f3b;
+    font-family: Montserrat;
+    color: #fbf6f3;
+    font-size: 15px;
+}
+
+.icone-nexus {
+    height: 50px;
 }
 
 #NEXUS,
@@ -132,18 +155,24 @@
 }
 
 
+
+
 #NEXUS .nexus-text,
 #NEXUS .students {
     opacity: 0;
     transform: translateY(60px);
     transition: all 0.8s ease-out;
-    
+
+}
+
+.img-students {
+    height: 725px;
 }
 
 #NEXUS .show {
     opacity: 1;
     transform: translateY(0);
-    
+
 }
 
 
@@ -156,7 +185,7 @@
     border-radius: 25px;
 }
 
-.desconto{
+.desconto {
     text-align: center;
     color: #C6A75E;
     margin-top: 40px;
@@ -164,7 +193,7 @@
 
 }
 
-.cartão{
+.cartão {
     border-radius: 15px;
     border: 3px solid #F8F9FB;
     width: 200px;
@@ -185,7 +214,7 @@
     border-color: transparent !important;
     border: 2px solid #fbf6f3 !important;
     border-radius: 10px !important;
-     color: #fbf6f3 !important;
+    color: #fbf6f3 !important;
 }
 
 .form-control:focus {
@@ -193,7 +222,7 @@
     box-shadow: none !important;
     border: 2px solid #ffffff !important;
     color: #fbf6f3 !important;
-   
+
 }
 
 .form-control::placeholder {
@@ -205,40 +234,321 @@
 
 .ENEM {
     margin-left: 20px;
-    width: 200px !important;
+    width: 300px;
 }
 
-#NOTA_ENEM, #Mensalidade{
-    margin-left: 20px;
-    width: 350px !important;
-}
-
-.btn-warning{
+.btn-warning {
     margin-left: 20px;
 }
 
-#informações{
-    font-family: Montserrat;
+.minha-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
 }
 
-#nav-responsiva{
-    display: flex; 
-    justify-content: flex-start;
+.img-campus {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 
+.mobile-nexus {
+    display: none;
+}
+
+#Inovação .valores {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Inovação .row {
+    align-items: flex-start;
+    padding-top: 10px;
+}
 
 
-@media (max-width: 768px){
+/* TABLET */
+@media (max-width: 992px) {
 
-    #body,html{
+    #Inovação .valores {
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    #Inovação .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+
+    #Inovação .col-2 {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #Inovação .cartão {
+        width: 130px;
+        margin: 10px 0;
+    }
+
+
+    #Inovação .col {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "label1 botao label2"
+            "input1 botao input2";
+        gap: 8px;
+        margin-top: 25px;
+        align-items: center;
+    }
+
+
+    #Inovação label[for="NOTA_ENEM"] {
+        grid-area: label1;
+        margin: 0;
+        font-size: 14px;
+    }
+
+
+    #Inovação #NOTA_ENEM {
+        grid-area: input1;
+        width: 100%;
+        margin: 0;
+    }
+
+
+    #Inovação #calcular {
+        grid-area: botao;
+        width: 100%;
+        height: auto;
+        align-self: center;
+        justify-self: center;
+        margin: 0;
+        margin-top: 40px;
+    }
+
+
+    #Inovação label[for="prisoma_número"] {
+        grid-area: label2;
+        margin: 0;
+        font-size: 14px;
+    }
+
+
+    #Inovação #Mensalidade {
+        grid-area: input2;
+        width: 100%;
+        margin: 0;
+    }
+
+    #Inovação #NOTA_ENEM,
+    #Inovação #Mensalidade {
+        max-width: 220px;
+        justify-self: center;
+    }
+
+    #Inovação label[for="NOTA_ENEM"],
+    #Inovação label[for="prisoma_número"] {
+        max-width: 220px;
+        justify-self: center;
+        width: 100%;
+    }
+
+}
+
+
+/* MOBILE */
+@media (max-width: 576px) {
+
+    #body,
+    html {
         overflow-x: hidden;
     }
 
-    .nav-respon {
-        flex-grow: 0 !important;
-        flex-basis: auto !important;
-        max-width: 200px;
-        
+    .section1 {
+        max-height: vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+    .section3 {
+        width: 100%;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar .container {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .navbar-toggler {
+        margin-left: auto !important;
+        margin-right: 0 !important;
+    }
+
+    #barra-navegacao {
+        width: 100%;
+    }
+
+    .icone-nexus {
+        height: 40px;
+    }
+
+    #carousel-nexus {
+        margin-top: -75px;
+    }
+
+    .carousel-img {
+        height: 300px;
+    }
+
+
+    #NEXUS,
+    #Inovação {
+        scroll-margin-top: 110px;
+    }
+
+    .img-students {
+        float: right;
+        width: 220px;
+        height: auto;
+
+        shape-outside: url('estudantes.png');
+        shape-margin: 5px;
+        margin-top: -50px;
+
+    }
+
+    .Titulo-nexus {
+        font-size: 20px;
+
+    }
+
+    .p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .texto-nexus {
+        margin: 0 auto;
+    }
+
+    .mobile-nexus {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .nexus-text {
+        display: none;
+
+    }
+
+
+    #Inovação .section2,
+    #Inovação {
+        padding: 20px 0;
+    }
+
+    #Inovação .valores {
+        width: 95%;
+        margin: 0 auto;
+        height: auto;
+        border-radius: 20px;
+        padding: 20px 15px;
+    }
+
+    #Inovação .row {
+        padding: 5px 0;
+    }
+
+
+    #Inovação .col-2 {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #Inovação .cartão {
+        width: 130px;
+        margin: 8px 0;
+    }
+
+
+    #Inovação .col {
+        width: 100%;
+        padding: 0 10px;
+        margin-top: 5px;
+    }
+
+    #Inovação .ENEM {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+        box-sizing: border-box;
+        margin-bottom: 8px;
+    }
+
+    #Inovação .btn-warning {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    #Inovação .desconto {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+
+    #Inovação label {
+        display: block;
+        width: 100%;
+        text-align: left;
+        margin-bottom: 3px;
+    }
+
+    #Inovação #calcular {
+        margin-top: 50px;
+    }
+
+    #Inovação label[for="NOTA_ENEM"] {
+        margin-bottom: -10px;
+    }
+
+    #Inovação label[for="prisoma_número"] {
+        margin-bottom: -5px;
+    }
+
+    #Inovação .row {
+        margin: 0 10px;
+    }
+
+    #Inovação .col-2 {
+        width: 50%;
+        padding: 0;
+    }
+
+
+    #Inovação .col-2:nth-child(odd) {
+        padding-right: 0;
+    }
+
+    #Inovação .col-2:nth-child(even) {
+        padding-left: 0;
+    }
+
+
+
 }
