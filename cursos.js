@@ -17,6 +17,22 @@ $(document).ready(function () {
         }
     );
 
+    // CLICK PARA MOBILE
+$(".card-curso").on("click", function () {
+
+    let overlay = $(this).find(".overlay");
+    let info = $(this).find(".btnoi");
+
+    if (overlay.css("opacity") == "0") {
+        info.stop(true, true).fadeIn(200);
+        overlay.stop(true, true).animate({ opacity: 0.6 }, 200);
+    } else {
+        info.stop(true, true).fadeOut(200);
+        overlay.stop(true, true).animate({ opacity: 0 }, 200);
+    }
+
+});
+
     // ORGANIZAÇÃO ALFABÉTICA
     let cards = $(".card-curso").get();
     cards.sort(function (a, b) {
